@@ -1,5 +1,7 @@
 ## Description
-This service calculates MD5 file hashes using the following components:
+The service that calculates MD5 hash of a file.
+
+Components:
 - API: **FastAPI**
 - Worker Manager: **Celery**
 - Message Broker: **RabbitMQ**
@@ -12,7 +14,7 @@ This service calculates MD5 file hashes using the following components:
 3. Upload a file
 4. Retrieve the hash using the file ID
 
-**To adjust the number of workers**, modify `docker-compose.yml`:
+Note: to adjust the number of workers, modify `docker-compose.yml`:
 ```yaml
     deploy:
         replicas: <number of workers>
